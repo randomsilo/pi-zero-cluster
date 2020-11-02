@@ -130,3 +130,6 @@ dmypy.json
 
 # private markdown files
 *.private.md
+
+# images
+*.img
