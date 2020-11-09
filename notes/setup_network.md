@@ -20,6 +20,10 @@ passwd
 raspi-config
 # set hostname
 # set wireless
+# enable ssh
+
+# update firmware
+sudo PRUNE_MODULES=1 RPI_REBOOT=1 SKIP_WARNING=1 rpi-update
 ```
 
 # banana pi zero m2

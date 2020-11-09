@@ -30,22 +30,22 @@ CMD ["php","-S","0.0.0.0:8080"]
 ### buid image
 
 ```bash
-docker build --rm -f "examples\debian_web\Dockerfile" -t debian_web:latest examples\debian_web
+docker build --rm -f "examples\debian_web_php\Dockerfile" -t debian_web_php:latest examples\debian_web_php
 ```
 
 ### run image
 
 ```bash
 # run
-docker run -d -p 8080:8080 --name test debian_web
+docker run -d -p 8080:8080 --name test_php debian_web_php
 
 # stop
-docker stop test
+docker stop test_php
 
 # remove
-docker rm test
+docker rm test_php
 
 # run with override directory
-docker run -d -p 8080:8080 -v C:/shop/randomsilo/pi-zero-cluster/examples/web/:/shop/randomsilo/web/ --name test debian_web
+docker run -d -p 8080:8080 -v C:/shop/randomsilo/pi-zero-cluster/examples/web/:/shop/randomsilo/web/ --name test_php debian_web_php
 ```
 
